@@ -170,9 +170,9 @@ function drawText() {
         context.fillStyle = `rgba(255, 105, 180, ${opacity})`;
 
         if (window.innerWidth < 600) {
-            drawTextWithLineBreaks(["I love you so much Pri❤️, more than", "all the time and space in the universe can contain"], canvas.width / 2, canvas.height / 2, fontSize, lineHeight);
+            drawTextWithLineBreaks(["I love you so much Pri❤️, more than", "all the time and space in the universe can contain"], canvas.width / 2, (canvas.height / 2 - 100), fontSize, lineHeight);
         } else {
-            context.fillText("I love you so much Pri❤️, more than all the time and space in the universe can contain", canvas.width/2, canvas.height/2);
+            context.fillText("I love you so much Pri❤️, more than all the time and space in the universe can contain", canvas.width/2, canvas.height/2 -100);
         }
 
         opacity = opacity + 0.01;
@@ -183,9 +183,9 @@ function drawText() {
 
 
         if (window.innerWidth < 600) {
-            drawTextWithLineBreaks(["and I can't wait to spend all the time in", "the world to share that love with you!"], canvas.width / 2, (canvas.height/2 + 60), fontSize, lineHeight);
+            drawTextWithLineBreaks(["and I can't wait to spend all the time in", "the world to share that love with you!"], canvas.width / 2, (canvas.height/2 -40), fontSize, lineHeight);
         } else {
-            context.fillText("and I can't wait to spend all the time in the world to share that love with you!", canvas.width/2, (canvas.height/2 + 50));
+            context.fillText("and I can't wait to spend all the time in the world to share that love with you!", canvas.width/2, (canvas.height/2 + 40));
         }
 
         secondOpacity = secondOpacity + 0.01;
@@ -194,9 +194,9 @@ function drawText() {
     if(frameNumber >= 3000 && frameNumber < 99999){
         context.fillStyle = `rgba(255, 105, 180, ${thirdOpacity})`;
         if (window.innerWidth < 600) {
-            drawTextWithLineBreaks(["Will you make me the happiest man on Earth", "and be my Valentine?🥹🥹🥹🥹"], canvas.width / 2, (canvas.height/2 + 120), fontSize, lineHeight);
+            drawTextWithLineBreaks(["Will you make me the happiest man on Earth", "and be my Valentine!🥹🥹🥹🥹"], canvas.width / 2, (canvas.height/2 + 20), fontSize, lineHeight);
         } else {
-            context.fillText("Will you make me the happiest man on Earth and be my Valentine?🥹🥹🥹🥹", canvas.width/2, (canvas.height/2 + 220));
+            context.fillText("Will you make me the happiest man on Earth and be my Valentine!🥹🥹🥹🥹", canvas.width/2, (canvas.height/2 + 20));
         }
         
         thirdOpacity = thirdOpacity + 0.01;
