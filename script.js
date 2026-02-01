@@ -228,7 +228,7 @@ function drawText() {
             drawTextWithLineBreaks(["I hope you make me the happiest man on Earth", "be my Valentine?❤️❤️❤️"], canvas.width / 2, (canvas.height/2 + 80), fontSize, lineHeight);
         } else {
             context.fillText("I hope make me the happiest man on Earth and be my Valentine?❤️❤️❤️", canvas.width/2, (canvas.height/2 + 100));
-        
+        }
         fourthOpacity = fourthOpacity + 0.01;
 
     }   
