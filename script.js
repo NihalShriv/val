@@ -26,6 +26,7 @@ var frameNumber = 0;
 var opacity = 0;
 var secondOpacity = 0;
 var thirdOpacity = 0;
+var fourthOpacity = 0;
 
 var baseFrame = context.getImageData(0, 0, window.innerWidth, window.innerHeight);
 
@@ -203,10 +204,10 @@ function drawText() {
 
     }   
     if(frameNumber >= 3250 && frameNumber < 99999){
-        context.fillStyle = `rgba(255, 105, 180, ${thirdOpacity})`;
+        context.fillStyle = `rgba(255, 105, 180, ${fourthOpacity})`;
             context.fillText("Will you make me the happiest man on Earth and be my Valentine?❤️❤️❤️", canvas.width/2, (canvas.height/2 + 60));
         
-        thirdOpacity = thirdOpacity + 0.01;
+        fourthOpacity = fourthOpacity + 0.01;
 
     }   
 
