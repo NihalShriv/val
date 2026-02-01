@@ -196,7 +196,7 @@ function drawText() {
         if (window.innerWidth < 600) {
             drawTextWithLineBreaks(["Will you make me the happiest man on Earth", "and be my Valentine?🥹🥹🥹🥹"], canvas.width / 2, (canvas.height/2 + 60), fontSize, lineHeight);
         } else {
-            context.fillText("Will you make me the happiest man on Earth and be my Valentine?🥹🥹🥹🥹", canvas.width/2, (canvas.height/2 + 120));
+            context.fillText("Will you make me the happiest man on Earth and be my Valentine?🥹🥹🥹🥹", canvas.width/2, (canvas.height/2 + 220));
         }
         
         thirdOpacity = thirdOpacity + 0.01;
