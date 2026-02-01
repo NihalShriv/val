@@ -58,6 +58,25 @@ function drawTextWithLineBreaks(lines, x, y, fontSize, lineHeight) {
     });
 }
 
+function drawHeartRow(y, opacity = 0.8, size = 22, gap = 40) {
+    context.font = `${size}px serif`;
+    context.textAlign = "center";
+    context.shadowColor = "rgba(186, 85, 211, 1)"; // purple glow
+    context.shadowBlur = 6;
+
+    const heart = "💜";
+    const centerX = canvas.width / 2;
+    const count = Math.floor(window.innerWidth / gap);
+
+    for (let i = -count / 2; i <= count / 2; i++) {
+        context.fillStyle = `rgba(186, 85, 211, ${opacity})`;
+        context.fillText(heart, centerX + i * gap, y);
+    }
+
+    context.shadowBlur = 0;
+}
+
+
 function drawText() {
     var fontSize = Math.min(30, window.innerWidth / 24); // Adjust font size based on screen width
     var lineHeight = 8;
@@ -206,9 +225,9 @@ function drawText() {
     if(frameNumber >= 3250 && frameNumber < 99999){
         context.fillStyle = `rgba(255, 105, 180, ${fourthOpacity})`;
         if (window.innerWidth < 600) {
-            drawTextWithLineBreaks(["I hope you make me the happiest man on Earth", "be my Valentine?❤️❤️❤️"], canvas.width / 2, (canvas.height/2 + 100), fontSize, lineHeight);
+            drawTextWithLineBreaks(["I hope you make me the happiest man on Earth", "be my Valentine?❤️❤️❤️"], canvas.width / 2, (canvas.height/2 + 80), fontSize, lineHeight);
         } else {
-            context.fillText("I hope make me the happiest man on Earth and be my Valentine?❤️❤️❤️", canvas.width/2, (canvas.height/2 + 120));
+            context.fillText("I hope make me the happiest man on Earth and be my Valentine?❤️❤️❤️", canvas.width/2, (canvas.height/2 + 100));
         
         fourthOpacity = fourthOpacity + 0.01;
 
@@ -226,6 +245,11 @@ function draw() {
 
     drawStars();
     updateStars();
+    const topY = window.innerWidth < 600 ? 60 : 80;
+    const bottomY = canvas.height - (window.innerWidth < 600 ? 40 : 60);
+
+    drawHeartRow(topY, 0.7);
+    drawHeartRow(bottomY, 0.7);
     drawText();
 
     if (frameNumber < 99999) {
