@@ -214,9 +214,9 @@ function drawText() {
     if(frameNumber >= 3000 && frameNumber < 99999){
         context.fillStyle = `rgba(255, 105, 180, ${thirdOpacity})`;
         if (window.innerWidth < 600) {
-            drawTextWithLineBreaks(["Will you make me the happiest man on Earth", "and be my Valentine!🥹🥹🥹🥹"], canvas.width / 2, (canvas.height/2 + 20), fontSize, lineHeight);
+            drawTextWithLineBreaks(["I pray you make me the happiest man on Earth", "and be my Valentine!🥹🥹🥹🥹"], canvas.width / 2, (canvas.height/2 + 20), fontSize, lineHeight);
         } else {
-            context.fillText("Will you make me the happiest man on Earth and be my Valentine!🥹🥹🥹🥹", canvas.width/2, (canvas.height/2 + 20));
+            context.fillText("I pray you make me the happiest man on Earth and be my Valentine!🥹🥹🥹🥹", canvas.width/2, (canvas.height/2 + 20));
         }
         
         thirdOpacity = thirdOpacity + 0.01;
@@ -225,9 +225,9 @@ function drawText() {
     if(frameNumber >= 3250 && frameNumber < 99999){
         context.fillStyle = `rgba(255, 105, 180, ${fourthOpacity})`;
         if (window.innerWidth < 600) {
-            drawTextWithLineBreaks(["I hope you make me the happiest man on Earth", "be my Valentine?❤️❤️❤️"], canvas.width / 2, (canvas.height/2 + 80), fontSize, lineHeight);
+            drawTextWithLineBreaks(["Will", "be my Valentine?❤️❤️❤️"], canvas.width / 2, (canvas.height/2 + 80), fontSize, lineHeight);
         } else {
-            context.fillText("I hope make me the happiest man on Earth and be my Valentine?❤️❤️❤️", canvas.width/2, (canvas.height/2 + 100));
+            context.fillText("Will you be my Valentine?❤️❤️❤️", canvas.width/2, (canvas.height/2 + 100));
         }
         fourthOpacity = fourthOpacity + 0.01;
 
