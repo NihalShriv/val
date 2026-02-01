@@ -205,7 +205,10 @@ function drawText() {
     }   
     if(frameNumber >= 3250 && frameNumber < 99999){
         context.fillStyle = `rgba(255, 105, 180, ${fourthOpacity})`;
-            context.fillText("Will you make me the happiest man on Earth and be my Valentine?❤️❤️❤️", canvas.width/2, (canvas.height/2 + 60));
+        if (window.innerWidth < 600) {
+            drawTextWithLineBreaks(["I hope you make me the happiest man on Earth", "be my Valentine?❤️❤️❤️"], canvas.width / 2, (canvas.height/2 + 100), fontSize, lineHeight);
+        } else {
+            context.fillText("I hope make me the happiest man on Earth and be my Valentine?❤️❤️❤️", canvas.width/2, (canvas.height/2 + 120));
         
         fourthOpacity = fourthOpacity + 0.01;
 
