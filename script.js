@@ -202,6 +202,13 @@ function drawText() {
         thirdOpacity = thirdOpacity + 0.01;
 
     }   
+    if(frameNumber >= 3250 && frameNumber < 99999){
+        context.fillStyle = `rgba(255, 105, 180, ${thirdOpacity})`;
+            context.fillText("Will you make me the happiest man on Earth and be my Valentine?❤️❤️❤️", canvas.width/2, (canvas.height/2 + 60));
+        
+        thirdOpacity = thirdOpacity + 0.01;
+
+    }   
 
      // Reset the shadow effect after drawing the text
      context.shadowColor = "transparent";
