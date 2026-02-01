@@ -48,7 +48,6 @@ function updateStars() {
     }
 }
 
-const button = document.getElementById("valentinesButton");
 
 
 
@@ -197,7 +196,6 @@ function drawText() {
         context.fillText("Will you make me the happiest man on Earth and be my Valentine?🥹🥹🥹🥹", canvas.width/2, (canvas.height/2 + 120));
         thirdOpacity = thirdOpacity + 0.01;
 
-        button.style.display = "block";
     }   
 
      // Reset the shadow effect after drawing the text
